@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include <wiringPi.h>
 
+/*
+*コメント 2017.1.7
+*サーボを制御してリモコンのボタンを押す
+*/
+
 int main(void){
   if(wiringPiSetupGpio() == -1) return 1;
   
