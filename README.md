@@ -13,3 +13,13 @@ ssh pi@192.168.xxx.xx
 ```
 cd /var/www/html
 ```
+
+###Maintenance
+```
+sudo apt-get update
+sudo apt-get upgrade
+```
+
+```
+sudo raspi-config
+```
