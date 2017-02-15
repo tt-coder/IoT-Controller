@@ -29,6 +29,10 @@ sudo raspi-config
 
 ### Install HUBOT
 
+Reference
+
+http://seiya-orz.hatenablog.com/entry/2016/06/25/214014
+http://jun8man.hatenablog.com/entry/2016/09/25/004851
 
 ```
 sudo apt-get install npm
@@ -37,3 +41,11 @@ sudo npm install -g n
 sudo n stable
 sudo npm install -g yo generator-hubot coffee-script
 ```
+
+```
+mkdir mybot
+cd mybot
+yo hubot
+(For slack -> Bot adapter slack)
+```
+
