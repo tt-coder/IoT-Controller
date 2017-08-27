@@ -49,3 +49,21 @@ yo hubot
 (For slack -> Bot adapter slack)
 ```
 
+### Set Up
+
+```
+passwd
+sudo raspi-config
+```
+
+pyenv
+```
+sudo apt-get install git gcc make openssl libssl-dev libbz2-dev libreadline-dev libsqlite3-dev
+
+```
+
+emacs
+```
+sudo apt-get install emacs
+
+```
