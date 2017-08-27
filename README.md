@@ -128,3 +128,13 @@ config.json
     ]
 }
 ```
+
+MJPEG-streamer
+```
+sudo apt-get install subversion libjpeg-dev imagemagick
+svn co https://svn.code.sf.net/p/mjpg-streamer/code/mjpg-streamer mjpg-streamer
+cd mjpg-streamer
+make
+lsusb
+./mjpg_streamer -i "./input_uvc.so -d /dev/video0 -r 1280x720 -f 10 -y -n" -o "./output_http.so -w ./www -p 8080"
+```
