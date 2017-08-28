@@ -75,6 +75,7 @@ pyenv global 3.X.X
 Python Library
 ```
 pip install rpi.gpio
+pip install wiringpi
 ```
 
 emacs
@@ -106,6 +107,8 @@ homebridge # For test
 sudo npm install -g homebridge-dummy
 mkdir .homebridge
 emacs .homebridge/config.json
+sudo npm install -g homebridge-camera-ffmpeg
+sudo npm install -g homebridge-cmd
 ```
 
 config.json
@@ -137,4 +140,28 @@ cd mjpg-streamer
 make
 lsusb
 ./mjpg_streamer -i "./input_uvc.so -d /dev/video0 -r 1280x720 -f 10 -y -n" -o "./output_http.so -w ./www -p 8080"
+```
+
+GPIO
+```
+sudo apt-get install pigpio
+sudo emacs /etc/rc.local
+sudo pigpiod
+pip install pigpio
+```
+
+ffmpeg
+https://signal-flag-z.blogspot.jp/2017/05/raspberry-pix264ffmpeg.html
+
+```
+sudo apt-get install -y libsdl2-dev libsdl2-image-dev libsdl2-ttf-dev libsdl2-mixer-dev
+sudo apt-get install -y libfontconfig1-dev libfribidi-dev
+git clone git://git.videolan.org/x264.git
+cd x264
+./configure --enable-static --enable-shared
+make
+sudo make install
+sudo ldconfig
+cd ..
+git clone git://source.ffmpeg.org/ffmpeg.git ffmpeg
 ```
